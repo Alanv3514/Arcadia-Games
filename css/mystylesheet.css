@@ -1,0 +1,922 @@
+:root {
+    --main-bg-color: #6528E0;
+    --bg-1-color: #171717;
+    --bg-2-color: #181419;
+    --blur-color: #7031ee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+@keyframes tilt-n-move-shaking {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(2px, 2px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(0, 0) rotate(0eg);
+    }
+
+    75% {
+        transform: translate(-2px, 2px) rotate(-1deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-1-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--main-bg-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--main-bg-color);
+}
+
+
+body {
+    background-color: var(--bg-2-color);
+    color: white;
+}
+
+
+.header {
+    background-color: var(--main-bg-color);
+    color: #ffffff;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 1.5rem 0;
+}
+
+.header .nav .logo {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.header .nav .logo:hover {
+    animation: tilt-n-move-shaking 0.25s infinite;
+}
+
+.header .menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.header .menu .li {
+    margin-right: 20px;
+}
+
+.header .menu .li .aNav {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.header .menu .li .aNav:hover {
+    transform: scale(0.95);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.header .menu .li .aNav.login {
+    background-color: var(--bg-2-color);
+    color: white;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.header .menu .li .aNav.login:hover {
+    background-color: var(--main-bg-color);
+}
+
+
+
+.main .mainSection {
+    color: white;
+    background: linear-gradient(to right top, #0000008a, #0000008a), url(../assets/img/banner-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main .mainSection .mainTitle {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.main .mainSection .mainSubTitle {
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+
+.main .mainSection .signinButton {
+    background-color: var(--main-bg-color);
+    color: #ffffff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+
+.main .mainSection .signinButton:hover {
+    background-color: var(--main-bg-color);
+    transform: scale(0.95);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.main {
+    .buscadorPrincipal {
+        background-color: var(--bg-2-color);
+        color: white;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .titleSection {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .gameSearchBar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+
+            .searchInput {
+                border: 2px solid white;
+                border-radius: 15px;
+                color: #ffffff;
+                font-size: 1.2rem;
+                height: 50px;
+                margin: 20px 0px;
+                outline: none;
+                padding: 0px 20px;
+                width: 500px;
+            }
+
+            .searchButton {
+                background-color: var(--main-bg-color);
+                display: inline-block;
+                color: #ffffff;
+                height: 50px;
+                margin: 20px 10px;
+                padding: 0 20px;
+                border-radius: 15px;
+                font-size: 1.2rem;
+                font-weight: 700;
+                border: 2px solid white;
+                text-align: center;
+                transition: transform 0.3s, box-shadow 0.3s;
+
+                &:hover {
+                    background-color: var(--main-bg-color);
+                    transform: scale(0.95);
+                    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+                }
+            }
+        }
+
+    }
+
+    .trendGames {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 10px;
+
+        .titleSection {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        .games {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 60px;
+
+            a {
+                text-decoration: none;
+                color: #ffffff;
+
+                .game {
+                    width: 200px;
+                    height: 300px;
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 10px;
+                    transition: all 0.5s ease;
+
+                    .trendImg {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 5px;
+
+                    }
+
+                    .titleGame {
+                        z-index: 2;
+                        position: absolute;
+                        text-align: center;
+                        top: 50%;
+                        left: 50%;
+                        max-width: 20rem;
+                        width: 100%;
+                        transform: translateY(-50%) translateX(-50%);
+
+                        h4 {
+                            font-size: 1.6rem;
+                            font-weight: bold;
+                            opacity: 0;
+                            margin-bottom: 0.5rem;
+                            letter-spacing: 0.1rem;
+                            transition: opacity 0.5s ease-in-out;
+
+                        }
+                    }
+
+                    &:hover {
+                        box-shadow: 0 0 30px var(--blur-color);
+                        transform: scale(0.9);
+
+                    }
+
+                    &:hover .titleGame {
+                        width: 100%;
+                        height: 100%;
+                        backdrop-filter: blur(20px);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    &:hover h4 {
+                        width: 100%;
+                        padding: 0.5rem;
+                        opacity: 1;
+                    }
+
+                }
+            }
+        }
+
+        .button {
+            border: 1px solid white;
+            box-sizing: content-box;
+            margin-top: 50px;
+            margin-left: 20px;
+            background-color: var(--main-bg-color);
+            color: #ffffff;
+            padding: 1rem 1rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            margin-bottom: 60px;
+            transition: transform 0.3s, box-shadow 0.3s;
+
+            &:hover {
+                background-color: var(--main-bg-color);
+                transform: scale(0.95);
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            }
+
+        }
+    }
+
+    .gotyGames {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 60px;
+
+        .titleSection {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        .gotys {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 0px 0px 40px 0px;
+
+            .itemGame {
+                border-radius: 15px;
+                width: 170px;
+                min-width: 170px;
+                font-size: 20px;
+                cursor: pointer;
+                margin-left: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .gotyGame {
+                    border-radius: 5%;
+                    width: 95%;
+                    height: 95%;
+                    object-fit: cover;
+
+
+                    &:hover {
+                        animation: tilt-n-move-shaking 0.25s infinite;
+                    }
+
+                }
+
+            }
+
+
+        }
+    }
+
+}
+
+
+.footer {
+    background-color: var(--main-bg-color);
+    color: #ffffff;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .navList {
+        list-style: none;
+        display: flex;
+        align-items: center;
+
+        .li {
+            margin-left: 20px;
+
+            .aNav {
+                text-decoration: none;
+                color: #ffffff;
+                font-weight: 700;
+                font-size: 1.2rem;
+            }
+
+            .gamesAdmin {
+                background-color: var(--bg-2-color);
+                color: white;
+                padding: 0.5rem 1rem;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    .flechaArriba {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+
+
+.signinBody {
+    height: 100vh;
+    background: linear-gradient(to right top, #24242473, #24242473), url("../assets/img/bg-register.jpeg");
+    background-size: cover;
+    background-position: center;
+
+    .signinHeader {
+        color: #ffffff;
+        height: 8vh;
+        padding: 30px;
+
+        .logo {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.2rem;
+
+            &:hover {
+                animation: tilt-n-move-shaking 0.25s infinite;
+            }
+        }
+    }
+
+    .main {
+        .signinSection {
+            background-color: rgb(42, 42, 42);
+            width: 30%;
+            margin: 0 auto;
+            border-radius: 5px;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            font-size: 1.2rem;
+
+            .signinTitle {
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
+
+            form {
+                width: 100%;
+                padding: 40px;
+
+                input:not(.check, .button),
+                select {
+                    width: 100%;
+                    margin-bottom: 20px;
+                    height: 40px;
+                    padding: 0px 20px;
+                    font-size: 1.2rem;
+                    border-radius: 10px;
+                    border: 2px solid var(--main-bg-color);
+                    background-color: #333333;
+                    outline: none;
+                    color: white;
+                }
+
+                .terms {
+                    font-size: 0.8rem;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 20px;
+
+                    .textoCheck {
+                        margin-left: 10px;
+                    }
+                }
+
+                .button {
+                    width: 87%;
+                    box-sizing: content-box;
+                    background-color: var(--main-bg-color);
+                    border: 2px solid var(--main-bg-color);
+                    color: #ffffff;
+                    padding: 1rem 1rem;
+                    border-radius: 5px;
+                    font-size: 1rem;
+                    font-weight: 500;
+
+                }
+
+                .help {
+                    margin-top: 40px;
+                    font-size: 1rem;
+                    text-decoration: none;
+                    color: #787878;
+                    font-weight: 400;
+
+                }
+            }
+
+        }
+
+    }
+}
+
+.mainDetail {
+
+    .detail {
+        padding-top: 50px;
+        background: linear-gradient(to right top, #6d6969a7, #6d6969a7), url("../assets/img/fallout4-bg.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 70vh;
+
+        .detailContainer {
+            width: 75%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 60px;
+
+            img {
+                border-radius: 15px;
+                height: 450px;
+            }
+
+            .detailText {
+                h1 {
+                    font-size: 2.2rem;
+                    font-weight: 700;
+                }
+
+                h2 {
+                    margin-top: 20px;
+                }
+
+                .creditContainer {
+                    margin-top: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+
+
+
+    }
+
+    .trailer {
+        padding-top: 150px;
+        padding-bottom: 100px;
+        width: 75%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 70px;
+
+        .infoContainer {
+            .socialMedia {
+                margin-bottom: 20px;
+
+                ul {
+                    list-style: none;
+                    display: flex;
+                    column-gap: 20px;
+
+                    li {
+                        a {
+                            text-decoration: none;
+                            color: #ffffff;
+                            font-size: 2.5rem;
+                            margin-right: 50px;
+                        }
+                    }
+
+                }
+            }
+
+            .info {
+                table {
+                    width: 100%;
+
+                    tr {
+                        td {
+                            font-size: 1.2rem;
+                            padding: 10px 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+@media (max-width: 768) {
+    .header {
+        height: initial;
+    }
+
+    .header .nav {
+        margin-left: 10px;
+        margin-right: 10px;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .header .nav .logo {
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+    .header .menu {
+        padding: initial;
+    }
+
+    .header .menu .li .aNav {
+        font-weight: 400;
+        margin-right: initial;
+        font-size: 1rem;
+        padding: 0.2rem;
+    }
+
+    .main {
+        .mainSection {
+            height: 60vh;
+
+            .mainTitle {
+                font-size: 2.5rem;
+            }
+
+            .mainSubTitle {
+                font-size: 1.5rem;
+            }
+
+            .signinButton {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+            }
+        }
+
+        .buscadorPrincipal {
+            height: 30vh;
+
+            .titleSection {
+                font-size: 1.6rem;
+            }
+
+            .gameSearchBar {
+                .searchInput {
+                    font-size: 1rem;
+                    height: 40px;
+                    width: 300px;
+                }
+
+                .searchButton {
+                    height: 40px;
+                    padding: 0 15px;
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .trendGames {
+            width: 95%;
+
+            .titleSection {
+                font-size: 2rem;
+            }
+
+            .games {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                a {
+                    width: 100%;
+
+                    .game {
+                        width: 100%;
+                        height: 500px;
+
+                        .titleGame {
+                            h4 {
+                                font-size: 1rem;
+                            }
+                        }
+
+                    }
+                }
+
+                &:hover {
+                    box-shadow: initial;
+                    transform: scale(0.9);
+
+                }
+
+            }
+
+            .button {
+                padding: 0.8rem 0.8rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        .gotyGames {
+            .titleSection {
+                font-size: 2rem;
+            }
+
+            .gotys {
+                .itemGame {
+                    width: 150px;
+                    min-width: 150px;
+                    font-size: 15px;
+                    margin-left: 20px;
+
+                    .gotyGame {
+                        width: 90%;
+                        height: 90%;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .footer {
+        height: initial;
+        padding-top: 15px;
+        padding-bottom: 20px;
+
+        .navList {
+            flex-direction: column;
+
+            row-gap: 15px;
+
+            .li {
+
+                .aNav {
+                    font-size: 1rem;
+                }
+
+                .gamesAdmin {
+                    padding: 0.5rem 0.8rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .signinBody {
+        .signinHeader {
+            padding: 20px;
+
+            .logo {
+                font-size: 1rem;
+            }
+        }
+
+        .main {
+            .signinSection {
+                width: 95%;
+                padding: 10px 10px;
+
+                .signinTitle {
+                    font-size: 2rem;
+                }
+
+                form {
+                    width: 100%;
+                    text-align: center;
+
+                    input:not(.check, .button),
+                    select {
+                        width: 80%;
+                        height: 35px;
+                        font-size: 1rem;
+                    }
+
+                    .terms {
+                        width: 80%;
+                        margin: 0 auto;
+                        font-size: 0.7rem;
+                    }
+
+                    .button {
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                        width: 70%;
+                        padding: 0.8rem 0.8rem;
+                        font-size: 0.8rem;
+                    }
+
+                    .help {
+                        text-align: left;
+                        font-size: 0.8rem;
+                    }
+                }
+
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    .mainDetail .detail {
+        height: initial;
+    }
+
+    .mainDetail .detail .detailContainer {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .mainDetail .detail .detailContainer img {
+        width: 100%;
+        height: 300px;
+    }
+
+    .mainDetail .detail .detailContainer .detailText h1 {
+        font-size: 1.5rem;
+    }
+
+    .mainDetail .detail .detailContainer .detailText h2 {
+        font-size: 1rem;
+    }
+
+    .mainDetail .detail .detailContainer .detailText .creditContainer {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .mainDetail .trailer {
+        width: 95%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .mainDetail .trailer .trailerContainer {
+        width: 100%;
+    }
+
+    .mainDetail .trailer .trailerContainer h2 {
+        margin-bottom: 20px;
+    }
+
+    .mainDetail .trailer .trailerContainer iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    .mainDetail .trailer .infoContainer {
+        width: 100%;
+    }
+
+    .mainDetail .trailer .infoContainer .socialMedia {
+        width: 100%;
+    }
+
+    .mainDetail .trailer .infoContainer .socialMedia ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .mainDetail .trailer .infoContainer .socialMedia ul li a {
+        font-size: 2rem;
+        margin-right: 20px;
+    }
+
+    .mainDetail .trailer .infoContainer .info table tr td {
+        font-size: 1rem;
+    }
+}
+
+
+hr {
+    border: 1px solid var(--main-bg-color);
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
