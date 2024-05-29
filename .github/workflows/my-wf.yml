@@ -1,6 +1,10 @@
-name: CI
+name: PostDeploy
 
-on: workflow_dispatch
+on: 
+  workflow_run:
+    workflows: pages build and deployment
+    types:
+      - completed
 
 jobs:
   build:
