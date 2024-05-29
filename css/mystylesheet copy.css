@@ -175,13 +175,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
 }
 
 .container {
     height: 100%;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap:nowrap;
     justify-content: start;
 }
 
@@ -189,7 +188,6 @@ body {
     width: 80px;
     border-radius: .75rem;
     background-size: cover;
-    background-position: center;
     cursor: pointer;
     overflow: hidden;
     border-radius: 1rem;
@@ -236,11 +234,6 @@ body {
 
 .description h4 {
     text-transform: uppercase;
-}
-
-.container input{
-          display: none;
-
 }
 
 input:checked+label {
@@ -332,6 +325,9 @@ input:checked+label .description {
             font-weight: 700;
             margin-bottom: 10px;
         }
+        input{
+            display: none;
+        }
 
     }
 
@@ -352,7 +348,6 @@ input:checked+label .description {
         margin-bottom: 60px;
         transition: transform 0.3s, box-shadow 0.3s;
 
-        cursor: pointer;
         &:hover {
             background-color: var(--main-bg-color);
             transform: scale(0.95);
@@ -570,6 +565,7 @@ input:checked+label .description {
 
     .detail {
         padding-top: 50px;
+        background: linear-gradient(to right top, #6d6969a7, #6d6969a7), url("../assets/img/fallout4-bg.jpg");
         background-size: cover;
         background-position: center;
         height: 70vh;

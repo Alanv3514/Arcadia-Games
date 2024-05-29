@@ -24,25 +24,30 @@
     </header>
     <main id="main" class="main">
         <section data-aos="zoom-in" data-aos-duration="1000" class="signinSection">
-            <form action="" method="post">
+            <form id="formSignIn" method="post">
                 <h2 class="signinTitle">Sign In</h2>
                 <div>
-                    <input type="text" placeholder="FirstName" required id="firstname" name="firstname">
+                    <input id="nameInput" type="text" required placeholder="FirstName"  id="firstname" name="firstname">
+                    <div class="error-message" id="nameErrorContainer"></div>
                 </div>
                 <div>
-                    <input type="text" placeholder="LastName" required id="lastname" name="lastname">
+                    <input id="lastNameInput" type="text" required placeholder="LastName"  id="lastname" name="lastname">
+                    <div class="error-message" id="lastNameErrorContainer"></div>
                 </div>
                 <div>
-                    <input type="email" placeholder="Email" required id="email" name="email">
+                    <input id="emailInput" type="email" required placeholder="Email"  id="email" name="email">
+                    <div class="error-message" id="emailErrorContainer"></div>
                 </div>
                 <div>
-                    <input type="password" placeholder="Password" required id="password" name="password">
+                    <input id="passInput" type="password" required placeholder="Password"  id="password" name="password">
+                    <div class="error-message" id="passwordErrorContainer"></div>
                 </div>
                 <div>
-                    <input type="date" placeholder="birthDate (dd/mm/yyyy)" required id="birthDate" name="birthDate">
+                    <input id="dateInput" type="date" required placeholder="birthDate (dd/mm/yyyy)"  id="birthDate" name="birthDate">
+                    <div class="error-message" id="dateErrorContainer"></div>
                 </div>
                 <div>
-                    <select name="country" id="country">
+                    <select name="country" id="country" required>
                         <option value="">Country</option>
                         <option value="AR">Argentina</option>
                         <option value="BO">Bolivia</option>
@@ -72,7 +77,8 @@
                     <label class="textoCheck" for="terms">I Accept Terms and Conditions</label>
                 </div>
                 <div>
-                    <input class="boton" type="submit" value="SignIn">
+                    <input class="boton" type="submit" value="SignIn" onclick="event.preventDefault();">
+
                 </div>
 
                 <div>
@@ -81,11 +87,14 @@
             </form>
         </section>
 
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script src="../js/validates.js"></script>
+        <script src="../js/signIn.js"></script>
     </main>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+
 </body>
 
 </html>

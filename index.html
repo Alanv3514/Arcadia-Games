@@ -14,7 +14,9 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
+
 <body>
+<script src="./js/index.js" type="module"></script>
     <header class="header">
         <nav class="nav">
             <a class="logo" href="#">
@@ -49,117 +51,21 @@
         <section id="trends" data-aos="fade-in" data-aos-offset="400" data-aos-delay="100" data-aos-duration="1000"
             class="trendGames">
             <h3 class="titleSection">Today's Trends</h3>
-            <div class="wrapper ">
-                <div class="container">
+            <div class=" wrapper center " id="wrapper">
+                <div class="container" id="cardContainer">
                     
-                    <input type="radio" name="slide" id="game_1" >
-                    <label for="game_1" class="game">
-                        <div class="row">
-                            <a href="./pages/details.html" class="description">
-                                <h4>Hogwarts Legacy</h4>
-                            </a>
-                            
-                        </div>
-                    </label>
                     
-                    <input type="radio" name="slide" id="game_2" >
-                    <label for="game_2" class="game">
-                        <div class="row">
-                            <a href="./pages/details.html" class="description">
-                                <h4>Diablo IV</h4>
-                            </a>
-                            
-                        </div>
-                    </label>
-                    
-                    <input type="radio" name="slide" id="game_3" >
-                    <label for="game_3" class="game">
-                        <div class="row">
-                            <a href="./pages/details.html" class="description">
-                                <h4>Resident Evil 4</h4>
-                            </a>
-                            
-                        </div>
-                    </label>
-                    
-                    <input type="radio" name="slide" id="game_4" >
-                    <label for="game_4" class="game">
-                        <div class="row">
-                            <a href="./pages/details.html" class="description">
-                                <h4>Stardew Valley</h4>
-                            </a>
-                            
-                        </div>
-                    </label>
-                    
-                    <input type="radio" name="slide" id="game_5" >
-                    <label for="game_5" class="game">
-                        <div class="row">
-                            <a href="./pages/details.html" class="description">
-                                <h4>Baldur's Gate III</h4>
-                            </a>
-                            
-                        </div>
-                    </label>
-                    
-                    <input type="radio" name="slide" id="game_6" >
-                    <label for="game_6" class="game">
-                        <div class="row">
-                            <a href="./pages/details.html" class="description">
-                                <h4>Castle Crashers</h4>
-                            </a>
-                            
-                        </div>
-                    </label>
-                    
-                    <input type="radio" name="slide" id="game_7" >
-                    <label for="game_7" class="game">
-                        <div class="row">
-                            <a href="./pages/details.html" class="description">
-                                <h4>Cyberpunk 2077</h4>
-                            </a>
-                            
-                        </div>
-                    </label>
-                    
-                    <input type="radio" name="slide" id="game_8" >
-                    <label for="game_8" class="game">
-                        <div class="row">
-                            <a href="./pages/details.html" class="description">
-                                <h4>Black 4 Blood</h4>
-                            </a>
-                            
-                        </div>
-                    </label>
-                    
-                    <input type="radio" name="slide" id="game_9" >
-                    <label for="game_9" class="game">
-                        <div class="row">
-                            <a href="./pages/details.html" class="description">
-                                <h4>Lies of P</h4>
-                            </a>
-                            
-                        </div>
-                    </label>
-                    
-                    <input type="radio" name="slide" id="game_10" >
-                    <label for="game_10" class="game">
-                        <div class="row">
-                            <a href="./pages/details.html" class="description">
-                                <h4>Helldivers II</h4>
-                            </a>
-                            
-                        </div>
-                    </label>
+
 
                 </div>
             </div>
-            <button class="button back">Back</button>
-            <button class="button forward">Forward</button>
+            <button class="button back" id="backButton">Back</button>
+            <button class="button forward" id="forwardButton">Forward</button>
         </section>
         <hr>
         <section data-aos="fade-in" data-aos-offset="200" data-aos-delay="100" data-aos-duration="2000"
             class="gotyGames">
+            <!-- Proximamente se reemplazara esta seccion por una seccion donde los datos vendran de una api propia -->
             <h3 class="titleSection">GOTY's Edition</h3>
             <div class="gotys">
                 <div class="itemGame">
@@ -215,6 +121,7 @@
     <script>
         AOS.init();
     </script>
+
 </body>
 
 </html>
