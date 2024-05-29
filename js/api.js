@@ -1,6 +1,6 @@
 const getGameList = (page)=>{
     localStorage.setItem("ActualPage",(page))
-        fetch(`https://rawg.io/api/games?key=${secrets.API_KEY}&page=${page}`)
+        fetch(`https://rawg.io/api/games?key=${process.env..API_KEY}&page=${page}`)
         .then(res => res.json())
         .then(data => localStorage.setItem("VGAMES",JSON.stringify(data)))
         .catch(error => alert(error));
@@ -9,7 +9,7 @@ const getGameList = (page)=>{
 const getGameDetail = async(id)=>{
     try
     {
-        const res = await fetch(`https://rawg.io/api/games/${id}?key=${secrets.API_KEY}`)
+        const res = await fetch(`https://rawg.io/api/games/${id}?key=${process.env..API_KEY}`)
         return res.json()
     }
     catch(error){
