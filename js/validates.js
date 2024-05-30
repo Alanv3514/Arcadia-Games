@@ -63,7 +63,6 @@ const isValidName = (inputName)=>{
     error.push("*There must be at least 2 characters")
     isValid=false
   }
-  console.log({isValid,error})
   return {isValid,error}
 }
 

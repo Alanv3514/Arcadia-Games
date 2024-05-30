@@ -16,7 +16,6 @@ const fillCards = (vgames) => {
   document.head.appendChild(styleElement);
 
   vgames.forEach((game, index) => {
-    console.log(game);
     const radioInputGame = document.createElement('input');
     const labelGame = document.createElement('label');
     const divRowGame = document.createElement('div');
@@ -101,8 +100,6 @@ const trendCards = (index) => {
   statusTrend += index;
 
   console.clear()
-  console.log(`actualPage: ${actualPage}`)
-  console.log(`statusTrend: ${statusTrend}`)
   if (statusTrend > 1)  {
     actualPage++
     statusTrend = -1;
@@ -126,10 +123,6 @@ const trendCards = (index) => {
   }
 
   fixTranslateContainer(statusTrend)
-  
-  console.log(`Luego de corregir`)
-  console.log(`actualPage: ${actualPage}`)
-  console.log(`statusTrend: ${statusTrend}`)
 }
 
 

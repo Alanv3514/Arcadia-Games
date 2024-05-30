@@ -12,7 +12,7 @@ const initDetails =  async ()=>{
     const gameDetail = await getGameDetail(gameId)
     //name, background_image, description_raw, developers,publishers, esrb_rating,genres,platforms,released,website,tags
     const firstSection = document.getElementById("firstSection")
-    console.log(gameDetail)
+
     const secondSection = document.getElementById("secondSection")
 
 
