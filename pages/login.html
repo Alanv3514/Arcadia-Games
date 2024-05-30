@@ -28,20 +28,23 @@
                 <h2 class="signinTitle">Login</h2>
 
                 <div>
-                    <input type="email" placeholder="Email" required id="email" name="email">
+                    <input type="email" placeholder="Email" required id="emailInput" name="email">
+                    <div class="error-message" id="emailErrorContainer"></div>
                 </div>
                 <div>
-                    <input type="password" placeholder="Password" required id="password" name="password">
+                    <input type="password" placeholder="Password" required id="passInput" name="password">
+                    <div class="error-message" id="passwordErrorContainer"></div>
                 </div>
 
 
                 <div>
                     <input class="boton" type="submit" value="Sign In">
+                
                 </div>
 
                 <div>
 
-                    <a id="help" class="help" href="signin.html">Sign In</a>
+                    <a id="help" class="help" href="signin.html " onclick="event.preventDefault();">Sign In</a>
                 </div>
             </form>
         </section>
@@ -51,6 +54,9 @@
     <script>
         AOS.init();
     </script>
+    
+    <script src="../js/validates.js"></script>
+    <script src="../js/login.js"></script>
 </body>
 
 </html>
